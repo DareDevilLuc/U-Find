@@ -1,29 +1,90 @@
-<script setup>
+<script setup lang="ts">
 
+
+interface Slots {
+    imageHolder?: () => any
+    descriptionHolder?: () => any
+    subSectionHolder?: () => any
+}
+
+const slots = defineSlots<Slots>()
 </script>
 
 <template>
     <div class="customButton">
-        <slot></slot>
+        <div class="image">
+            <div class="imageContainer">
+                <slot name="imageHolder"/>
+            </div>
+        </div>
+
+        <div class="description">
+            <slot name="descriptionHolder"/>
+            <p class="subSection"><slot name="subSectionHolder"/></p>
+        </div>
+        
+
     </div>
 </template>
 
 <style scoped>
     .customButton{
-        background-color: maroon;
-        padding: 1rem 2rem;
-        font-size: 1.25rem;
-        min-width: 200px;
+        display: flex;
+        flex-direction: column;
+        min-width: 350px;
+        min-height: 200px;
+        max-width: 500px;
+        max-height: 450px;
         text-align: center;
-        background-color: maroon;
-        color: white;
+        background-color: white;
+        border: 1px grey solid;
         border-radius: 8px;
         cursor: pointer;
         transition: 0.3s;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);;
     }
 
     .customButton:hover{
         transform: scale(1.1);
-        background-color: rgb(188, 18, 18);
+        border-color: rgb(188, 18, 18);
+    }
+
+    .image{
+        display: flex;
+        justify-content: left;
+        max-height: 110px;
+    }
+
+    .customButton:hover .imageContainer{
+        background-color: rgb(229, 98, 98);
+    }
+
+    .imageContainer{
+        background-color: rgb(244, 218, 218);
+        max-width: 20%;
+        min-height: 62px;
+        margin: 1.5rem;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    
+
+    .description{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        justify-content: left;
+        min-height: 300px;
+        color: maroon;
+        font-weight: bold;
+        font-size: x-large;
+    }
+
+    .subSection{
+        font-size: medium;       
+        font-weight: normal;     
+        color: grey;          
+        margin-top: 0.5rem;
     }
 </style>
