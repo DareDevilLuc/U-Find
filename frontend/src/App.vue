@@ -15,6 +15,10 @@ import { RouterLink, RouterView } from 'vue-router'
       
     </header>
   <RouterView />
+
+  <div class="footer">
+    Made by Kyle Casirayan
+  </div>
 </template>
 
 <style scoped>
@@ -24,9 +28,10 @@ import { RouterLink, RouterView } from 'vue-router'
     align-items: center;
     font-size: xx-large;
     color: rgb(0, 0, 0);
+    background-color: ghostwhite;
     font-weight: bold;
     width: 100%;
-    border: 1px solid ;
+    border: 1px gainsboro solid ;
     padding: 2rem;
   }
 
@@ -36,6 +41,14 @@ import { RouterLink, RouterView } from 'vue-router'
     width: 100%;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  .footer{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 1rem;
+    color: gray
   }
 
   .borderIntro{
@@ -55,9 +68,13 @@ import { RouterLink, RouterView } from 'vue-router'
     }
   }
 
-    @media (min-width: 900px){
+    @media (min-width: 1024px){
     .borderIntro{
       margin-left: 21rem;
+    }
+
+    .headIntro{
+      min-width: 1280px;
     }
   }
 

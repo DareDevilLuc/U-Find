@@ -6,6 +6,11 @@
 </script>
 
 <template>
+  <div class="center">
+    <p class="bigText">Found Something? Lost Something?</p>
+    <p class="smallText">We help bring lost and found items together. Post what you've found or search for what you've lost.</p>
+  </div>
+
   <div class="redirect">
     <router-link to="/postLost">
       <Choose>
@@ -50,13 +55,37 @@
 </template>
 
 <style scoped>
+  .center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid gainsboro;
+
+  }
+
+  .bigText{
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .smallText{
+    font-size: 1rem;
+    color: gray;
+    font-weight: normal;
+  }
+
   .redirect{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: ghostwhite;
     gap: 40px;
-    padding-top: 100px;
-    width: 60%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 75%;
   }
 
   @media (min-width: 300px){
@@ -71,6 +100,7 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
+      min-width: 100%;
     }
   }
 

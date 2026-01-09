@@ -5,6 +5,7 @@ interface Slots {
     imageHolder?: () => any
     descriptionHolder?: () => any
     subSectionHolder?: () => any
+    chooseButtonHolder?: () => any
 }
 
 const slots = defineSlots<Slots>()
@@ -21,6 +22,7 @@ const slots = defineSlots<Slots>()
         <div class="description">
             <slot name="descriptionHolder"/>
             <p class="subSection"><slot name="subSectionHolder"/></p>
+            <div class="choosebutton"><slot name="chooseButtonHolder"/></div>
         </div>
         
 
@@ -31,7 +33,7 @@ const slots = defineSlots<Slots>()
     .customButton{
         display: flex;
         flex-direction: column;
-        min-width: 350px;
+        min-width: 300px;
         min-height: 200px;
         max-width: 500px;
         max-height: 450px;
@@ -61,7 +63,7 @@ const slots = defineSlots<Slots>()
 
     .imageContainer{
         background-color: rgb(244, 218, 218);
-        max-width: 20%;
+        max-width: 70px;
         min-height: 62px;
         margin: 1.5rem;
         border-radius: 10px;
