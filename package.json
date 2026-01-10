@@ -1,0 +1,7 @@
+{
+  "name": "u-find",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix frontend run dev"
+  }
+}
