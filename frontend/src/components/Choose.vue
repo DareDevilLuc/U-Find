@@ -39,7 +39,7 @@ const slots = defineSlots<Slots>()
         max-height: 450px;
         text-align: center;
         background-color: white;
-        border: 1px grey solid;
+        border: 1px gainsboro solid;
         border-radius: 8px;
         cursor: pointer;
         transition: 0.3s;
