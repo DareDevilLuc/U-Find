@@ -23,6 +23,9 @@
         <template #subSectionHolder>
           Lost something important? Create a post with details and photos to get help from the community.
         </template>
+        <template #chooseButtonHolder>
+          Post Lost Item
+        </template>
       </Choose>
     </router-link>
     <router-link to="/postFound">
@@ -36,6 +39,9 @@
         <template #subSectionHolder>
           Found something? Help the owner by posting details and photos to help them identify their belongings.
         </template>
+        <template #chooseButtonHolder>
+          Post Found Item
+        </template>
       </Choose>
     </router-link>
     <router-link to="/browse">
@@ -47,7 +53,10 @@
           <p>Browse Items</p>
         </template>
         <template #subSectionHolder>
-          Search through items posted by the community. You might find what you're looking for or recognize something!
+          Search through items posted by the community. You might find what you're looking!
+        </template>
+        <template #chooseButtonHolder>
+          Browse All Items
         </template>
       </Choose>
     </router-link>
@@ -64,18 +73,40 @@
     margin-top: 3rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid gainsboro;
-
   }
 
-  .bigText{
-    font-size: 3rem;
-    font-weight: bold;
-  }
   .smallText{
-    font-size: 1rem;
-    color: gray;
-    font-weight: normal;
+    display: flex;
+    text-align: center;
   }
+
+  @media (min-width: 300px){
+    .bigText{
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    
+    .smallText{
+      font-size: 0.5rem;
+      color: gray;
+      font-weight: normal;
+      max-width: 80%;
+    }
+  }
+
+    @media (min-width: 1024px){
+    .bigText{
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .smallText{
+      font-size: 1rem;
+      color: gray;
+      font-weight: normal;
+    }
+  }
+
 
   .redirect{
     display: flex;
@@ -92,6 +123,7 @@
     .redirect{
       flex-direction: column;
       justify-content: center;
+      min-width: 80%;
     }
   }
 

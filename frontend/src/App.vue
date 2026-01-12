@@ -48,7 +48,8 @@ import { RouterLink, RouterView } from 'vue-router'
     justify-content: center;
     position: fixed;
     bottom: 1rem;
-    color: gray
+    color: gray;
+    opacity: 0.3;
   }
 
   .borderIntro{
