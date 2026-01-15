@@ -50,13 +50,35 @@
                     Reward (Optional)
                     <input type="text" placeholder="e.g., 100PHP">
                 </div>
+                <div class="contactInformation">
+                    <h1>Your Contact Information</h1>
+                </div>
 
+                Full Name *
+                <input type="text" placeholder="Your name">
+
+                Email *
+                <input type="text" placeholder="your@email.com">
+
+                Phone (Optional)
+                <input type="text" placeholder="+630000000000">
+
+                <div class="twoButtons">
+                    <p class="buttonOne">Post Lost Item</p>
+                    <RouterLink :to="{name: 'home'}" class="buttonTwo">
+                        Cancel
+                    </RouterLink>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <style scoped>
+    a{
+        text-decoration: none;
+    }
+
     .headInfo{
         min-width: 80%;
         padding: 1rem;
@@ -92,8 +114,47 @@
         border-radius: 8px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);;
         padding: 2rem;
+        margin-bottom: 2rem;
     }
 
+    .twoButtons{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        border-top-width: 1px;
+        border-color: gainsboro;
+        border-top-style: solid;
+        padding-top: 1rem;
+    }
+
+    .twoButtons .buttonOne, .twoButtons .buttonTwo{
+        padding: 0.3rem;
+        min-width: 45%;
+        text-align: center;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .twoButtons .buttonOne{
+        background-color: rgb(151, 46, 66);
+        color: white;
+        border-radius: 8px;
+    }
+
+    .twoButtons .buttonOne:hover{
+        background-color: rgb(192, 17, 49);
+    }
+
+    .twoButtons .buttonTwo{
+        color: black;
+        border: 1px gainsboro solid;
+        border-radius: 8px;
+    }
+    
+    .twoButtons .buttonTwo:hover{
+        background-color: rgb(248, 240, 240);
+    }
     .reward{
         display: flex;
         flex-direction: column;
@@ -108,7 +169,7 @@
         background-color: ghostwhite;
         border: 1px gainsboro solid;
         border-radius: 10px;
-        padding: 1rem;
+        padding: 0.8rem;
         margin-bottom: 1rem;
         font-size: medium;
         font-family: 'Arial';
@@ -122,6 +183,19 @@
     }
     
     .itemDetails h1{
+        font-size: x-large;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    .contactInformation{
+        border-top-width: 1px;
+        border-color: gainsboro;
+        border-top-style: solid;
+        padding-top: 1rem;
+    }
+
+    .contactInformation h1{
         font-size: x-large;
         font-weight: 500;
         margin-bottom: 1rem;
