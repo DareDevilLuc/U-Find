@@ -55,6 +55,7 @@ import { RouterLink, RouterView } from 'vue-router'
   .borderIntro{
     max-width: 45%;
     margin-left: 5rem;
+    outline: none;
   }
 
   .subsection{
