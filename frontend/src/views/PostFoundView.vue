@@ -1,9 +1,10 @@
 <script setup>
 import Post from '@/components/Post.vue';
-
+import BackToHome from '@/components/BackToHome.vue';
 </script>
 
 <template>
+    <BackToHome/>
     <Post 
     head-big-info="Post a Found Item"
     head-sub-info="Help us find the owner of the item"
